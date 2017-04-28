@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <title>BunTiles</title>
+  <head>
+
+    <link id="favicon" rel="icon" href="http://rokinone.github.io/rokin.svg" type="image/x-icon">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="buntiles.css">
+  </head>
+  <body onresize="resize()">
+    
+    <header>
+      <a href="http://rokinone.github.io/home.html" alt="World is a Cube">
+        <img src="http://rokinone.github.io/rokin.svg" id="wiac" width="60" height="60">
+      </a>
+      BunTiles
+      <img src="https://cdn.hyperdev.com/f76e4dad-1703-4b86-9cdf-98c5b4a4d6ce%2Finfo.svg?1480513075805" id="infoToggle" width="60" height="60">
+    </header>
+    
+    <div id="info">
+      <header>
+        Info
+        <button id="infoClose">X</button>
+      </header>
+      <p>
+        BunTiles is a toy. Play with it. Word "bunt" is German for "colorful"
+      </p>
+      <p>
+        Options:<br>
+        <button onclick="randomize()">random</button>
+        <button onclick="reset()">reset</button>
+        <button onclick="toggleBorder()">border</button>
+        <br>Cell size:<br>
+        10<input type="range" min="10" max="100" onchange="changeSize(this.value)">100
+      </p>
+    </div>
+    
+    <div id="map"></div>
+    <script src="buntiles.js"></script>
+  </body>
+</html>
